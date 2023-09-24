@@ -99,4 +99,5 @@ you can edit the `.vscode/settings.json` file and disable it as follows:
 
     [Click here for more information on configuring Python linters in VS Code.](https://code.visualstudio.com/docs/python/linting)
 
-   
+
+Testing commit hash
