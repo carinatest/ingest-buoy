@@ -13,7 +13,7 @@ class Lidar(IngestPipeline):
     LIDAR INGESTION PIPELINE
 
     Ingest of Lidar data from an AXYS Technologies buoy stationed off the coast of
-    Humboldt, CA.  Adding a comment to test changes.
+    Humboldt, CA.  Adding more comment to test changes.
 
     --------------------------------------------------------------------------------"""
 
