@@ -1,0 +1,90 @@
+classname: tsdat.StorageRetriever
+parameters: 
+  transformation_parameters:
+    alignment:
+      time: CENTER
+    range:
+      time: 150
+    width:
+      time: 60
+
+coords:
+  time:
+    name: N/A
+    data_converters:
+      - classname: tsdat.transform.CreateTimeGrid
+        interval: 1hr
+  height:
+    name: height
+
+data_vars:
+  wind_speed:
+    name: wind_speed
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  horizontal_dispersion:
+    name: horizontal_dispersion
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  min_wind_speed:
+    name: min_wind_speed
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  max_wind_speed:
+    name: max_wind_speed
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  wind_direction:
+    name: wind_direction
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  vertical_wind_speed:
+    name: vertical_wind_speed
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  vertical_dispersion:
+    name: vertical_dispersion
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  carrier_noise_ratio:
+    name: carrier_noise_ratio
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  doppler_spectral_broadening:
+    name: doppler_spectral_broadening
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  data_availability:
+    name: data_availability
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  pressure:
+    name: pressure
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  relative_humidity:
+    name: relative_humidity
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  internal_temperature:
+    name: internal_temperature
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        
+  air_temperature:
+    name: air_temperature
+    data_converters:
+      - classname: tsdat.transform.NearestNeighbor
+        

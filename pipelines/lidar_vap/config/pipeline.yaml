@@ -1,0 +1,16 @@
+classname: pipelines.lidar_var.pipeline.LidarVap
+
+datastreams:
+  - humboldt.buoy_z05-lidar-10m.a1
+
+triggers: []
+
+retriever:
+  path: pipelines/lidar_vap/config/retriever.yaml
+
+dataset:
+  path: pipelines/lidar_vap/config/dataset.yaml
+quality:
+  path: shared/quality.yaml
+storage:
+  path: shared/storage.yaml
