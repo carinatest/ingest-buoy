@@ -1,0 +1,103 @@
+classname: tsdat.io.retrievers.StorageRetriever
+parameters:
+  transformation_parameters:
+    alignment:
+      time: CENTER
+    range:
+      time: 150
+    width:
+      time: 60
+
+coords:
+  time:
+    name: N/A
+    data_converters:
+      - classname: tsdat.transform.CreateTimeGrid
+        interval: 1hr
+  height:
+    name: height
+
+data_vars:
+  wind_speed:
+    .*buoy_z05-lidar.*:
+      name: wind_speed
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  horizontal_dispersion:
+    .*buoy_z05-lidar.*:
+      name: horizontal_dispersion
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  min_wind_speed:
+    .*buoy_z05-lidar.*:
+      name: min_wind_speed
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  max_wind_speed:
+    .*buoy_z05-lidar.*:
+      name: max_wind_speed
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  wind_direction:
+    .*buoy_z05-lidar.*:
+      name: wind_direction
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  vertical_wind_speed:
+    .*buoy_z05-lidar.*:
+      name: vertical_wind_speed
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  vertical_dispersion:
+    .*buoy_z05-lidar.*:
+      name: vertical_dispersion
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  carrier_noise_ratio:
+    .*buoy_z05-lidar.*:
+      name: carrier_noise_ratio
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  doppler_spectral_broadening:
+    .*buoy_z05-lidar.*:
+      name: doppler_spectral_broadening
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  data_availability:
+    .*buoy_z05-lidar.*:
+      name: data_availability
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  pressure:
+    .*buoy_z05-lidar.*:
+      name: pressure
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  relative_humidity:
+    .*buoy_z05-lidar.*:
+      name: relative_humidity
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  internal_temperature:
+    .*buoy_z05-lidar.*:
+      name: internal_temperature
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
+
+  air_temperature:
+    .*buoy_z05-lidar.*:
+      name: air_temperature
+      data_converters:
+        - classname: tsdat.transform.NearestNeighbor
