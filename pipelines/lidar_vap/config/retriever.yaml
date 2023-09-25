@@ -3,10 +3,8 @@ parameters:
   transformation_parameters:
     alignment:
       time: CENTER
-    range:
-      time: 150
     width:
-      time: 60
+      time: 3600
 
 coords:
   time:
@@ -22,82 +20,82 @@ data_vars:
     .*buoy_z05-lidar.*:
       name: wind_speed
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   horizontal_dispersion:
     .*buoy_z05-lidar.*:
       name: horizontal_dispersion
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   min_wind_speed:
     .*buoy_z05-lidar.*:
       name: min_wind_speed
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   max_wind_speed:
     .*buoy_z05-lidar.*:
       name: max_wind_speed
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   wind_direction:
     .*buoy_z05-lidar.*:
       name: wind_direction
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   vertical_wind_speed:
     .*buoy_z05-lidar.*:
       name: vertical_wind_speed
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   vertical_dispersion:
     .*buoy_z05-lidar.*:
       name: vertical_dispersion
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   carrier_noise_ratio:
     .*buoy_z05-lidar.*:
       name: carrier_noise_ratio
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   doppler_spectral_broadening:
     .*buoy_z05-lidar.*:
       name: doppler_spectral_broadening
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   data_availability:
     .*buoy_z05-lidar.*:
       name: data_availability
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   pressure:
     .*buoy_z05-lidar.*:
       name: pressure
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   relative_humidity:
     .*buoy_z05-lidar.*:
       name: relative_humidity
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   internal_temperature:
     .*buoy_z05-lidar.*:
       name: internal_temperature
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
 
   air_temperature:
     .*buoy_z05-lidar.*:
       name: air_temperature
       data_converters:
-        - classname: tsdat.transform.NearestNeighbor
+        - classname: tsdat.transform.BinAverage
