@@ -1,4 +1,4 @@
-classname: pipelines.lidar_var.pipeline.LidarVap
+classname: pipelines.lidar_vap.pipeline.LidarVap
 
 datastreams:
   - humboldt.buoy_z05-lidar-10m.a1
