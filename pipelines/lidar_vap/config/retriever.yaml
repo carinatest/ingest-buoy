@@ -5,6 +5,8 @@ parameters:
       time: CENTER
     width:
       time: 3600
+    range:
+      time: 7200
 
 coords:
   time:
